@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="content-header">
+            <a href="#"><img src="logo.png" class="logo"></a>  
+            <nav>
+                <a href="index.html" id="register-page-link">Cadastro</a>
+                <a href="consulta.html">Consulta</a>
+            </nav>
+        </div>
+        
+    </header>
+
+    
+    <main>
+        <div class="title-block">
+            <h1 id="title">Registro de nova despesa</h1>
+        </div>
+        
+        <div class="form">
+    
+            <select name="year" id="input-year" class="data">
+                <option value="">Ano</option>
+                <option value="2024">2024</option>
+            </select>
+
+            <select name="month" id="input-month" class="data">
+                <option value="">Mês</option>
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+    
+            <input type="number" name="day" min="1" max="31" id="day-input" class="data" placeholder="Dia">
+            
+            <select name="type" id="type-input">
+                <option value="">Tipo</option>
+                <option value="1">Alimentação</option>
+                <option value="2">Educação</option>
+                <option value="3">Lazer</option>
+                <option value="4">Saúde</option>
+                <option value="5">Transporte</option>
+            </select>
+
+            <input type="text" name="description" id="description-input" placeholder="Descrição">
+            
+            <input type="text" name="value" id="value-input" placeholder="Valor">
+            
+            <button type="button" id="send-button" onclick="registerExpense()">+</button>
+            
+        </div>
+        
+
+        <div class="dialog-container" id="dialog-container">
+            <div class="dialog-content">
+                <h2 class="dialog-information title">Erro de gravação</h2>
+                <p class="dialog-information description">Existem campos obrigatórios que não foram preenchidos.</p>
+                <button type="button" class="dialog-information button" id="dialog-button" onclick="dialogContainerExit()">Voltar e corrigir</button>    
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
